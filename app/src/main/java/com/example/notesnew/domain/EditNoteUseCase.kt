@@ -1,8 +1,10 @@
 package com.example.notesnew.domain
 
-class EditNoteUseCase {
+class EditNoteUseCase(
+    private val repository: NotesRepository
+) {
 
     operator fun invoke(noteId: Int) {
-        TODO()
+        repository.editNote(noteId)
     }
 }
